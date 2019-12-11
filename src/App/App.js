@@ -2,20 +2,19 @@ import React from 'react';
 import studentData from '../helpers/data/studentsData';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { render } from '@testing-library/react';
 
 class App extends React.Component {
-  // state = {
-  //   students: [],
-  //   livingStudents: [],
-  // }
+  state = {
+    students: [],
+    livingStudents: [],
+  }
 
-  // componentDidMount() {
-  //   const students = studentData.getStudents();
-  //   this.setState({ students });
-  //   const livingStudents = studentData.livingStudents();
-  //   this.setState({ livingStudents });
-  // }
+  componentDidMount() {
+    const students = studentData.getStudents();
+    this.setState({ students });
+    const livingStudents = studentData.livingStudents();
+    this.setState({ livingStudents });
+  }
 
   render() {
     return (

@@ -141,4 +141,17 @@ const students = [
 
 const getStudents = () => students;
 
-export default { getStudents };
+const livingStudents = () => {
+  const theLivingStudents = [];
+  students.forEach((x) => {
+    const livStudents = x.filter((z) => z.isDead === false);
+    theLivingStudents.push(livStudents);
+  });
+  console.log(theLivingStudents);
+};
+
+// const dearlyBeloved = () => {
+
+// };
+
+export default { getStudents, livingStudents };
