@@ -1,28 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import studentData from '../helpers/data/studentsData';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { render } from '@testing-library/react';
 
-function App() {
-  return (
+class App extends React.Component {
+  // state = {
+  //   students: [],
+  //   livingStudents: [],
+  // }
+
+  // componentDidMount() {
+  //   const students = studentData.getStudents();
+  //   this.setState({ students });
+  //   const livingStudents = studentData.livingStudents();
+  //   this.setState({ livingStudents });
+  // }
+
+  render() {
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <button className='btn btn-danger'>HELP ME</button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <button className='btn btn-danger'>HELP ME</button>
     </div>
-  );
+    );
+  }
 }
 
 export default App;
