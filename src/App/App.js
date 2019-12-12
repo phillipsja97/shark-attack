@@ -1,25 +1,29 @@
 import React from 'react';
 import studentData from '../helpers/data/studentsData';
+import SharkTank from '../components/Shark-Tank/SharkTank';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   state = {
     students: [],
-    livingStudents: [],
+    liveStudents: [],
+    deadStudents: [],
   }
 
   componentDidMount() {
     const students = studentData.getStudents();
     this.setState({ students });
-    const livingStudents = studentData.livingStudents();
-    this.setState({ livingStudents });
+    const liveStudents = studentData.livingStudents();
+    this.setState({ liveStudents });
+    const deadStudents = studentData.theDeadStudents();
+    this.setState({ deadStudents });
   }
 
   render() {
     return (
     <div className="App">
-     <button className='btn btn-danger'>HELP ME</button>
+     <SharkTank liveStudents={this.state.liveStudents} />
     </div>
     );
   }
