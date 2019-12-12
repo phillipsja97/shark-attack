@@ -1,6 +1,7 @@
 import React from 'react';
 import studentData from '../helpers/data/studentsData';
 import SharkTank from '../components/Shark-Tank/SharkTank';
+import GraveYard from '../components/Graveyard/Graveyard';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -30,7 +31,7 @@ class App extends React.Component {
         </div>
         <div className="col-6">
           <h1 className="text-center">Grave Yard</h1>
-          {/* <GraveYard deadStudents={this.state.deadStudents} /> */}
+          <GraveYard deadStudents={this.state.deadStudents} />
         </div>
       </div>
     </div>
