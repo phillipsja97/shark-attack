@@ -14,7 +14,7 @@ class SharkTank extends React.Component {
     console.log(livingStudents);
     const studentCard = livingStudents.map((student) => <LiveStudent key={student.id} student={student} />);
     return (
-      <div className="SharkTank">
+      <div className="d-flex flex-wrap justify-content-between">
       {studentCard}
       </div>
     );

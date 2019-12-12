@@ -22,8 +22,17 @@ class App extends React.Component {
 
   render() {
     return (
-    <div className="App">
-     <SharkTank liveStudents={this.state.liveStudents} />
+      <div className="App">
+      <div className="d-flex">
+        <div className="col-6">
+          <h1 className="text-center">Shark Tank</h1>
+          <SharkTank liveStudents={this.state.liveStudents} />
+        </div>
+        <div className="col-6">
+          <h1 className="text-center">Grave Yard</h1>
+          {/* <GraveYard deadStudents={this.state.deadStudents} /> */}
+        </div>
+      </div>
     </div>
     );
   }
