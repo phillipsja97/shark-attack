@@ -45,7 +45,7 @@ const students = [
     id: 'student8',
     firstName: 'Evan',
     lastName: 'Grabenstein',
-    isDead: false,
+    isDead: true,
   },
   {
     id: 'student9',
