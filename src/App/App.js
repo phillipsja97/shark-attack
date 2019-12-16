@@ -23,9 +23,9 @@ class App extends React.Component {
 
   sharkAttack = () => {
     let livingStudents = studentData.livingStudents();
-    const randStudent = livingStudents[Math.floor(Math.random() * livingStudents.length)];
-    const randStudentId = randStudent.id;
-    studentData.followTheLight(randStudentId);
+    const randomStudent = livingStudents[Math.floor(Math.random() * livingStudents.length)];
+    const randomStudentId = randomStudent.id;
+    studentData.followTheLight(randomStudentId);
     const deadStudents = studentData.theDeadStudents();
     livingStudents = studentData.livingStudents();
     this.setState({ deadStudents, livingStudents });
