@@ -10,9 +10,9 @@ class GraveYard extends React.Component {
 
   render() {
     const dedStudents = this.props.deadStudents;
-    const deadStudentCard = dedStudents.map((student) => <Gravestone key={student} student={student} />);
+    const deadStudentCard = dedStudents.map((student) => <Gravestone key={student.id} student={student} />);
     return (
-      <div className="d-flex justify-content-between">
+      <div className="d-flex flex-wrap justify-content-between">
         {deadStudentCard}
       </div>
     );
