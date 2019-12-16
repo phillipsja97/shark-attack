@@ -151,4 +151,14 @@ const theDeadStudents = () => {
   return deadStudents;
 };
 
-export default { getStudents, livingStudents, theDeadStudents };
+const followTheLight = (studentId) => {
+  const studentIndex = students.findIndex((student) => student.id === studentId);
+  students[studentIndex].isDead = true;
+};
+
+export default {
+  getStudents,
+  livingStudents,
+  theDeadStudents,
+  followTheLight,
+};
