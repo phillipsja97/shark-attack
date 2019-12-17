@@ -10,6 +10,7 @@ class LiveStudent extends React.Component {
 
   render() {
     const { student } = this.props;
+    console.log(student, 'livestudents');
     return (
       <div className="card col-6">
       <div className="card-body">
