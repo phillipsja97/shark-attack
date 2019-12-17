@@ -22,26 +22,26 @@ class App extends React.Component {
   }
 
   sharkAttack = () => {
-    let livingStudents = studentData.livingStudents();
-    const randomStudent = livingStudents[Math.floor(Math.random() * livingStudents.length)];
+    let liveStudents = studentData.livingStudents();
+    const randomStudent = liveStudents[Math.floor(Math.random() * liveStudents.length)];
     const randomStudentId = randomStudent.id;
     studentData.followTheLight(randomStudentId);
     const deadStudents = studentData.theDeadStudents();
-    livingStudents = studentData.livingStudents();
-    this.setState({ deadStudents, livingStudents });
+    liveStudents = studentData.livingStudents();
+    this.setState({ deadStudents, liveStudents });
   }
 
 
   render() {
     return (
       <div className="App">
-      <div className="d-flex">
+      <div className="d-flex flex-wrap">
         <div className="col-6">
           <h1 className="text-center">Shark Tank</h1>
           <SharkTank liveStudents={this.state.liveStudents} sharkAttack={this.sharkAttack} />
         </div>
         <div className="col-6">
-          <h1 className="text-center">Grave Yard</h1>
+          <h1 className="text-center" id="graveyardTitle">Grave Yard</h1>
           <GraveYard deadStudents={this.state.deadStudents} />
         </div>
       </div>

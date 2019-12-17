@@ -24,7 +24,7 @@ class SharkTank extends React.Component {
     const studentCard = livingStudents.map((student) => <LiveStudent key={student.id} student={student} />);
     return (
       <div className="text-Center">
-        <button className="btn btn-outline-primary" onClick={this.sharkAttackEvent}>Shark Attack!</button>
+        <button className="btn btn-outline-danger" onClick={this.sharkAttackEvent}>Shark Attack!</button>
       <div className="d-flex flex-wrap justify-content-between">
       {studentCard}
       </div>

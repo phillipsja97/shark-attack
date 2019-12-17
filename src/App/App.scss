@@ -35,3 +35,14 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  background-image: url(https://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/PublishingImages/blog/posts/Sharks.png&w=750&h=375);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#graveyardTitle {
+  padding-bottom: 1em;
+}
